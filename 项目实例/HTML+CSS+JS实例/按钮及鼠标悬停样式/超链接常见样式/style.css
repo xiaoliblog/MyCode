@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:20px;
+}
+body{
+    background:black;
+}
+.main{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+a{
+    position: relative;
+    display: inline-block;
+    color:#2980b9;
+}
+.noline{
+    text-decoration: none;
+}
+p{
+    margin-top:10px;
+}
+label{
+    display:inline-block;
+    width:150px;
+    text-align:center;
+    color:#95a5a6;
+}
+/* 普通下划线 */
+a.underline:hover{
+    text-decoration: underline;
+}
+/* 动态下划线 */
+a.aniline::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:0;
+    height:100%;
+    border-bottom:2px solid #2980b9;
+    transition:0.4s linear;
+}
+a.aniline:hover::after{
+    width:100%;
+}
+/* 阴影及变色 */
+a.color{
+    transition: 0.4s linear;
+}
+a.color:hover{
+    font-weight: bold;
+    text-shadow:2px 2px 5px gray;
+    color:#3498db;
+}
+/* 带上小尾巴 */
+a.tail::after{
+    position:absolute;
+    margin-left:10px;
+    content:"";
+    color:#c0392b;
+}
+a.tail:hover::after{
+    content:"new!";
+}
+/* 晃动效果 */
+a.shake:hover{
+    animation:shake 0.4s linear infinite;
+}
+@keyframes shake{
+    33%{
+        transform:rotateZ(-10deg);
+    }
+    66%{
+        transform:rotateZ(10deg);
+    }
+}
+/* 跳跃效果 */
+a.jump:hover{
+    animation: jump 0.4s linear infinite;
+}
+@keyframes jump{
+    33%{
+        transform: translateY(-5px);
+    }
+    66%{
+        transform: translateY(5px);
+    }
+}
+/* 翻转效果 */
+a.flip{
+    transition:0.8s linear;
+}
+a.flip:hover{
+    transform:rotateY(360deg);
+}
+/* 缩放效果 */
+a.zoom:hover{
+    animation:zoom 0.8s linear infinite;
+}
+@keyframes zoom{
+    0%,100%{
+        transform:scale(0.8);
+    }
+    50%{
+        transform:scale(1.2);
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>b站弹幕按钮</title>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+
+    <div class="wrap">
+        <input type="checkbox" name="" id="checkbox">
+        <p>开启弹幕</p>
+    </div>
+    <script>
+        // 获取元素
+        var checkbox = document.querySelector("#checkbox")
+        // 定义初始值
+        var flag = 0
+        // 获取文本
+        var text = document.querySelector('.wrap').querySelector('p')
+        // 添加点击事件
+        checkbox.onclick = function () {
+            if (flag == 0) {
+                // 改变文本的值
+                text.innerHTML = '关闭弹幕'
+                // 重新赋值
+                flag = 1
+            } else {
+                text.innerHTML = '开启弹幕'
+                flag = 0
+            }
+        }
+
+    </script>
+</body>
+
+</html>

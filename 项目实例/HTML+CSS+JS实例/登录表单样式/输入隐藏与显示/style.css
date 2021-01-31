@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+}
+.login {
+    position: relative;
+    width: 400px;
+    height: 40px;
+    margin: 300px auto;
+}
+input {
+   
+    width: 400px;
+    height: 40px;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    border-bottom: 2px solid #fff;
+    font-size: 20px;
+}
+label img{
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    width: 20px;
+}
